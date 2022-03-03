@@ -4,9 +4,9 @@
           <div class="col-6 d-flex flex-column justify-content-center px-5">
               <div class="text-uppercase ms-green fw-bold fs-7 mt-5"> 1 7 <span class="mx-1"></span> y e a r s <span class="mx-1"></span>o f <span class="mx-1"></span>e x p e r i e n c e</div>
 
-              <div class="fw-bold title">
-                  <h1>We are a</h1>
-                  <h1>Web Design <span class="ms-green">Agency</span></h1>
+              <div class="text-capitalize fw-bold title">
+                  We are a <br>
+                  Web Design <span class="ms-green">Agency</span>
               </div>
 
               <div class="divider my-2"></div>
@@ -47,9 +47,9 @@ export default {
 .slider-card {
     background-color: #f9f9f9;
 
-    .title {
-        font-family: "Quicksand";
-        font-weight: 700;
+    .title{
+      font-size: 50px;
+      font-family: "Quicksand";
     }
 
     a {
