@@ -1,0 +1,24 @@
+// richiamo file bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// richiamo font generale ubuntu
+@import "~@fontsource/ubuntu/index.css";
+@import "~@fontsource/ubuntu/400.css";
+
+// richiamo font quicksand per particolari / titoletti
+@import "~@fontsource/quicksand/index.css";
+@import "~@fontsource/quicksand/400.css";
+@import "~@fontsource/quicksand/500.css";
+@import "~@fontsource/quicksand/600.css";
+@import "~@fontsource/quicksand/700.css";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: "Ubuntu"; 
+}
