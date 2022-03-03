@@ -22,3 +22,25 @@
 body { 
     font-family: "Ubuntu"; 
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.ms-btn {
+    display: inline-block;
+    font-family: "Quicksand";
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+}
+
+.ms-btn-green{
+    background-image: linear-gradient(to right, rgba(7, 217, 0, 0.8) , rgba(0, 219, 168, 0.8));
+    box-shadow: 5px 5px 20px  #00d9a656;
+}
+
+.ms-green {
+    color: #00D9A6;
+}

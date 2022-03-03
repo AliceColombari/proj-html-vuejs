@@ -1,26 +1,25 @@
 <template>
-  <div id="app" class="container text-center">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1 class="debug">Prova debug font quicksand</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <!-- importo tag file .vue collegati -->
+    <MyHeader/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// importo file .vue collegati
+import MyHeader from './components/MyHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // importo nome file .vue collegati
+    MyHeader,
   }
 }
 </script>
 
 <style lang="scss">
-  @import './style/general.scss';
 
-  .debug {
-    font-family: "quicksand";
-  }
+  // richiamo file scss general common
+  @import './style/general.scss';
 </style>
