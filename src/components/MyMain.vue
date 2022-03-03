@@ -1,18 +1,27 @@
 <template>
-  <div>
-     <h1>prova</h1>
-  </div>
+  <main>
+      <FirstSection/>
+  </main>
 </template>
 
 <script>
+
+import FirstSection from './FirstSection.vue';
+
 export default {
     name: "MyMain",
+    components: {
+        FirstSection,
+
+    }
 
 }
 </script>
 
 <style lang="scss">
-    h1 {
-        margin-top: 200px;
+
+    main {
+        margin-top: 150px;
     }
+    
 </style>
