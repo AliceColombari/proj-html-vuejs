@@ -1,8 +1,8 @@
 <template>
   <div class="section-fifth">
-    <div class="container-fluid my-5 py-5 overlay">
+    <div class="container-fluid py-5 overlay">
 
-        <div class="ms-green virgolette text-center">“</div>
+        <div class="ms-green virgolette text-center">&#8220;</div>
 
         <h1 class="text-light fst-italic fs-4 my-5 w-50 mx-auto text-center">When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon - are amazing!</h1>
         <div class="client text-center"> 
