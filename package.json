@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fontsource/alice": "^4.5.3",
     "@fontsource/quicksand": "^4.5.4",
     "@fontsource/ubuntu": "^4.5.3",
     "bootstrap": "^5.1.3",
