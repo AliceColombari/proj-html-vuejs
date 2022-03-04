@@ -12,7 +12,7 @@
         <!-- card 3 immagini -->
         <div class="row row-cols-3">
             <!-- componente card inserito - collegamento -->
-            <SixSectionCard/>
+            <SixSectionCard v-for="(card, i) in cardsData" :key="i" :cardData="card"/>
         </div>
         <!-- fine card 3 immagini -->
 
@@ -38,17 +38,17 @@ export default {
             cardsData: [
                 {
                     img: 'serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg',
-                    data: 'May 24, 2018 &#8226; by Alex',
+                    data: 'May 24, 2018 •by Alex',
                     title: 'Marketing Ideas'
                 },
                 {
                     img: 'Businessman-at-the-desk-in-his-office-resting--1024x768.jpg',
-                    data: 'May 24, 2018 &#8226; by Alex',
+                    data: 'May 24, 2018 •by Alex',
                     title: 'Rest During Working Hours'
                 },
                 {
                     img: 'simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg',
-                    data: 'May 24, 2018 &#8226; by Alex',
+                    data: 'May 24, 2018 •by Alex',
                     title: 'Develop Your Startup Idea'
                 }
             ]
