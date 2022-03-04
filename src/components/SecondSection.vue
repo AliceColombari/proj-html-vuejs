@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="container-fluid">
+    <div class="container-fluid my-5 py-5">
       <div class="row my-5 g-0 align-items-center">
         <!-- inizio section sx -->
         <div class="col-5 px-4">
@@ -25,7 +25,7 @@
                   <i :class="data.icon" class="mb-4"></i>
                   <!-- scorro titolo e testo sottostante -->
                   <h4 class="title fs-3 mb-2">{{data.title}}</h4>
-                  <p class="my_fs">{{data.text}}</p>
+                  <p class="my_fs text-secondary">{{data.text}}</p>
                 </div>
               </div>
             </div>
