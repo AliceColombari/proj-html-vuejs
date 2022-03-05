@@ -3,6 +3,8 @@
     <!-- importo tag file .vue collegati -->
     <MyHeader/>
     <MyMain/>
+    <MyFooter/>
+    <MyChatBtn/>
     
   </div>
 </template>
@@ -11,6 +13,8 @@
 // importo file .vue collegati
 import MyHeader from './components/MyHeader.vue';
 import MyMain from './components/MyMain.vue';
+import MyFooter from './components/MyFooter.vue';
+import MyChatBtn from './components/MyChatBtn.vue';
 
 
 export default {
@@ -18,7 +22,9 @@ export default {
   components: {
     // importo nome file .vue collegati
     MyHeader,
-    MyMain
+    MyMain,
+    MyFooter,
+    MyChatBtn
  
   }
 }

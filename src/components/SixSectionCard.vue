@@ -36,12 +36,12 @@ export default {
         img {
             box-shadow: 3px 3px 5px grey;
             border-radius: 10px;
-            transition: transform 1s;
+            // transition: transform 1s;
         }
 
-        &:hover {
-            transform: scale(1.1);
-        }
+        // &:hover {
+        //     transform: scale(1.1);
+        // }
     }
 
     .text {
