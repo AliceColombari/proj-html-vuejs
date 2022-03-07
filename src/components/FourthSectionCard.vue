@@ -57,15 +57,10 @@ export default {
       opacity: 0;
       transition: opacity 1s;
 
-      .text{
-        position: absolute;
-        bottom: 10%;
-        left: 10%;
-        opacity: 0;
-
-        &:hover{
-            opacity: 1;
-        }
+      &:hover {
+        text-align: left;
+        padding-left: 20px;
+        opacity: 1;
       }
     }
   }

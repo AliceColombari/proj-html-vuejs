@@ -7,7 +7,7 @@
                 <div class="text">
                     <div class="text-secondary fs-7">{{cardData.data}}</div>
                     <ul class="fs-5">
-                        <li>{{cardData.title}}</li>
+                        <li><span>•</span> {{cardData.title}}</li>
                     </ul>
                 </div>
             </div>
@@ -36,12 +36,7 @@ export default {
         img {
             box-shadow: 3px 3px 5px grey;
             border-radius: 10px;
-            // transition: transform 1s;
         }
-
-        // &:hover {
-        //     transform: scale(1.1);
-        // }
     }
 
     .text {
@@ -49,15 +44,28 @@ export default {
         bottom: -10%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 20px 0px 10px 20px;
+        padding: 20px;
 
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 3px 3px 5px grey;
         width: 80%;
 
-        ul li::marker {
+        ul li {
+            list-style: none;
+            padding-left: 0;
+
+            span {
             color: #00D9A6;
+            margin-right: 10px;
+            font-size: 20px;
+            }
+        }
+
+        &:hover {
+            background-image: linear-gradient(to right, rgba(7, 217, 0, 0.8), rgba(0, 219, 168, 0.8));
+            color: #fff;
+            cursor: pointer;
         }
 
     }

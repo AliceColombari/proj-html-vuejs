@@ -38,6 +38,11 @@ body {
 .ms-btn-green{
     background-image: linear-gradient(to right, rgba(7, 217, 0, 0.8) , rgba(0, 219, 168, 0.8));
     box-shadow: 5px 5px 20px  #00d9a656;
+
+    &:hover {
+        background-image: linear-gradient(to right, rgb(54, 54, 54) , black);
+        box-shadow: 5px 5px 20px  #00000056;
+    }
 }
 
 .ms-green {
@@ -47,6 +52,11 @@ body {
 .ms-btn-black{
     background-image: linear-gradient(to right, rgb(54, 54, 54) , black);
     box-shadow: 5px 5px 20px  #00000056;
+
+    &:hover {
+        background-image: linear-gradient(to right, rgba(7, 217, 0, 0.8) , rgba(0, 219, 168, 0.8));
+        box-shadow: 5px 5px 20px  #00d9a656;
+    }
 }
 
 /* regole per la creazione della linea verde */

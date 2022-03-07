@@ -5,7 +5,7 @@
         <!-- chat close -->
         <i class="far fa-comment" v-if="!chatOpen"></i> 
         <!-- chat open / comparsa della x per chiudere chat btn -->
-        <i class="fas fa-times fa-2xs" v-if="chatOpen"></i>
+        <!-- <i class="fas fa-times fa-2xs" v-if="chatOpen"></i> -->
     </div>
     <!-- fine btn open / close chat -->
 

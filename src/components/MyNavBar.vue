@@ -55,9 +55,14 @@ export default {
             color: #000;
 
             &:hover {
-              color: grey;
+              color: #00d9a6;
             }
           }
+
+        }
+
+        .ms-green:hover {
+            color: #000;
         }
 }
 </style>

@@ -1,67 +1,140 @@
 <template>
-  <div class="h-100 slider-card">
-      <div class="row h-100 w-100">
-          <div class="col-6 d-flex flex-column justify-content-center px-5">
-              <div class="text-uppercase ms-green fw-bold fs-7 mt-5"> 1 7 <span class="mx-1"></span> y e a r s <span class="mx-1"></span>o f <span class="mx-1"></span>e x p e r i e n c e</div>
+  <div class="slider position-relative">
+    <div class="container-fluid m-0 px-0">
 
-              <div class="text-capitalize fw-bold title">
-                  We are a <br>
-                  Web Design <span class="ms-green">Agency</span>
-              </div>
+      <!-- @afterChange="loadnumber" -> funzione per per funzionare lo slider sui numeri, per cambio colore -->
+      <!-- V-BIND stampa attributi, ci permette di inserire una variabile all'interno di un attributo di un tag -->
+      <VueSlickCarousel v-bind="settings" @afterChange="loadnumber" ref="carousel">
+        <!-- richiamo la card per visualizzare i risultati -->
+        <!-- stampo a schermo i miei risultati - item in nomeArray -->
+        <!-- item e chiave in nomeArray -->
+        <FirstSectionCard
+        v-for="(card, i) in cardInfo" :key="i"
+        :cardInfomations="card"
+        :activeClass="(i == index) ? 'active' : ''"
+        />
+      </VueSlickCarousel>
 
-              <div class="divider my-2"></div>
-
-              <p class="my-2"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi dicta assumenda dolores quos culpa nesciunt soluta veniam cupiditate voluptatem temporibus, atque eaque repellat cum dolorum vero facere dolor, nihil laudantium.</p>
-
-
-            <button class="ms-btn ms-btn-black me-4 mt-5">
-                  READ MORE
-            </button>
-
-            <div class="social text-uppercase fs-6 fw-bold my-5">
-                <a href="#">facebook</a>
-                <span class="mx-3">-</span>
-                <a href="#">instagram</a>
-                <span class="mx-3">-</span>
-                <a href="#">youtube</a>
-                <span class="mx-3">-</span>
-                <a href="#">twitter</a>
-            </div>
-
-          </div>
-
+      <div class="counter-slider">
+        <ul>
+          <li 
+          v-for="(counter, i) in cardInfo" 
+          :key="i"
+          @click="goToSlide(i)"
+          role="button"
+          :class="(index == i) ? 'active' : ''"> 
+          <span v-if="i < 10">0</span>{{i}}</li>
+        </ul>
       </div>
+
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-    name: "FirstSection"
 
+<script>
+
+import FirstSectionCard from './FirstSectionCard.vue';
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+
+export default {
+  name : 'FirstSection',
+  components : {
+    FirstSectionCard,
+    VueSlickCarousel
+  },
+  data(){
+    return{
+      index : 0,
+      // funzionamento slider preso da "https://gs-shop.github.io/vue-slick-carousel/#/"
+      settings : {
+        accessibility : true,
+        // eliminati pulsanti
+        arrows : false,
+        // funzionamento in auto
+        autoplay : true,
+        autoplaySpeed : 7000,
+        infinite : true,
+        initialSlide : 0,
+        // pausa con hover
+        pauseOnDotsHover : false,
+        pauseOnFocus : false,
+        pauseOnHover : true,
+      },
+      // ARRAY DI OGGETTI - struttura dati che contiene tutte le info necessarie - componente genitore
+      cardInfo : [
+        {
+          TitleTop: 'We Are a',
+          Subtitle: 'Web Design',
+          SubtitleGreen: 'Agency',
+          paragraf: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.',
+          img: require('../assets/image/Group-36-2x.png')
+        },
+        {
+          TitleTop: 'Analysis ',
+          Subtitle: 'and competitive',
+          SubtitleGreen: 'Benchmark',
+          paragraf: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.',
+          img: require('../assets/image/Group-40-2x.png')
+        },
+        {
+          TitleTop: 'Custom',
+          Subtitle: 'Web',
+          SubtitleGreen: 'Development',
+          paragraf: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.',
+          img: require('../assets/image/Group-35-2x.png')
+        }
+      ]
+    }
+  },
+  // METHODS - all'interno inserisco le funzioni
+  methods : {
+    loadnumber(loadedSlide){
+      this.index = loadedSlide;
+    },
+    goToSlide(i){
+      // ref consente di ottenere un riferimento diretto a un elemento DOM specifico, in questo caso a ref carousel
+      this.$refs.carousel.goTo(i);
+    }
+  }
 }
 </script>
 
+
 <style scoped lang="scss">
- @import '../style/general.scss';
+  .slider {
+  margin-top: 150px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  cursor: pointer;
 
-.slider-card {
-    background-color: #f9f9f9;
+  .counter-slider {
+    position: absolute;
+    bottom: 13%;
+    left: 43%;
+    transform: translateX(-50%);
+    
+    ul {
+      background-image: linear-gradient(to right, rgb(54, 54, 54) , black);
+      box-shadow: 5px 5px 20px  #00000056;
+      border-radius: 100px;
+      color: lightgray;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        padding: 8px 20px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 100px;
 
-    .title{
-      font-size: 50px;
-      font-family: "Quicksand";
+        &.active {
+          background-image: linear-gradient(to right, rgba(7, 217, 0, 0.8) , rgba(0, 219, 168, 0.8));
+        }
+      }
     }
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .ms-btn {
-        width: 200px;
-    }
-
+  }
 }
-
-
 </style>
